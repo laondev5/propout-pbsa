@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import NavigationDots from './NavigationDots';
+import React from "react";
+import { motion } from "framer-motion";
+import NavigationDots from "./NavigationDots";
 
 type SectionProps = {
   children: React.ReactNode;
@@ -9,34 +8,48 @@ type SectionProps = {
   className?: string;
   title?: string;
   showDots?: boolean;
-  titlePosition?: 'left' | 'center';
+  titlePosition?: "left" | "center";
 };
 
-const Section = ({ 
-  children, 
-  id, 
-  className = '', 
-  title, 
+const Section = ({
+  children,
+  id,
+  className = "",
+  title,
   showDots = true,
-  titlePosition = 'left' 
+  titlePosition = "left",
 }: SectionProps) => {
   return (
-    <section 
-      id={id} 
-      className={`min-h-screen py-8 md:py-12 px-4 md:px-8 relative ${className}`}
+    <section
+      id={id}
+      className={`min-h-screen py-16 md:py-24 px-4 md:px-8 relative ${className}`}
     >
       {title && (
-        <div className={`mb-8 md:mb-12 ${titlePosition === 'center' ? 'text-center' : ''}`}>
-          <motion.h2 
+        <div
+          className={`mb-16 md:mb-24 ${
+            titlePosition === "center" ? "text-center" : ""
+          }`}
+        >
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="title-text"
+            className="gradient-text text-3xl md:text-5xl font-medium relative inline-block"
           >
             {title}
+            <div className="absolute -bottom-4 left-0 w-1/2 h-px bg-gradient-to-r from-accent to-transparent"></div>
           </motion.h2>
-          {showDots && <NavigationDots />}
+          {showDots && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <NavigationDots />
+            </motion.div>
+          )}
         </div>
       )}
       {children}

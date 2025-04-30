@@ -1,5 +1,4 @@
-
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const CampusMap = () => {
   return (
@@ -9,11 +8,14 @@ const CampusMap = () => {
       transition={{ duration: 0.5 }}
       className="w-full h-full"
     >
-      <img 
-        src="/lovable-uploads/46f9d242-5776-4e4f-b15f-0678153f8a7b.png" 
-        alt="Campus Hot Zones Map" 
-        className="w-full h-full object-contain rounded-lg"
-      />
+      <div className="image-card hover-glow overflow-hidden">
+        <img
+          src="/lovable-uploads/pp16.jpg"
+          alt="Campus Hot Zones Map"
+          className="w-full h-full object-cover rounded-2xl"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/20"></div>
+      </div>
     </motion.div>
   );
 };

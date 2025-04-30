@@ -1,5 +1,4 @@
-
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 type TeamMemberProps = {
   image: string;
@@ -12,15 +11,20 @@ const TeamMember = ({ image, name, title, index }: TeamMemberProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="flex flex-col items-center"
+      className="group"
     >
-      <div className="w-32 h-32 md:w-40 md:h-40 overflow-hidden rounded-md mb-4">
-        <img src={image} alt={name} className="w-full h-full object-cover" />
+      <div className="image-card hover-lift aspect-[3/4]">
+        <img src={image} alt={name} className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <h3 className="text-lg font-medium text-white">{name}</h3>
+            <p className="text-sm text-white/90">{title}</p>
+          </div>
+        </div>
       </div>
-      <h3 className="text-lg font-semibold">{name}</h3>
-      <p className="text-sm text-gray-300">{title}</p>
     </motion.div>
   );
 };
