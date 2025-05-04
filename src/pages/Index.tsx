@@ -194,7 +194,7 @@ const Index = () => {
       </Section>
 
       {/* Investment Section */}
-      <Section
+      {/* <Section
         id="investment"
         title="INVESTMENT STRUCTURE"
         titlePosition="center"
@@ -232,7 +232,7 @@ const Index = () => {
             </div>
           </motion.div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Goals Section */}
       <Section id="goals" title="OUR GOALS" titlePosition="center">
@@ -438,7 +438,7 @@ const Index = () => {
       </Section>
 
       {/* Feasibility Section */}
-      <Section
+      {/* <Section
         id="feasibility"
         title="FEASIBILITY & DEMAND"
         titlePosition="center"
@@ -484,10 +484,10 @@ const Index = () => {
             </div>
           </motion.div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Projections Section */}
-      <Section
+      {/* <Section
         id="projections"
         title="MARKET PROJECTIONS"
         titlePosition="center"
@@ -518,7 +518,7 @@ const Index = () => {
             </p>
           </motion.div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Team Section */}
       <Section id="team" title="OUR TEAM" titlePosition="center">
@@ -555,7 +555,7 @@ const Index = () => {
             className="image-card aspect-[4/5] w-full"
           >
             <img
-              src="/lovable-uploads/pp15.jpg"
+              src="/lovable-uploads/hr1.jpg"
               alt="Modern building interior"
               className="object-cover w-full h-full rounded-xl"
             />

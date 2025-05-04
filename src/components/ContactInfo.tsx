@@ -4,15 +4,19 @@ const ContactInfo = () => {
   const contactItems = [
     {
       icon: "mail",
-      text: "info@propout.com",
+      text: "pbsa.investments@mypropout.com",
     },
     {
       icon: "phone",
-      text: "+234 802 345 6789",
+      text: "+234 0906 994 6579",
+    },
+    {
+      icon: "phone",
+      text: "+234 0907 474 3062",
     },
     {
       icon: "location",
-      text: "Lagos, Nigeria\nAbuja, Nigeria",
+      text: "Abuja, Nigeria",
     },
   ];
 

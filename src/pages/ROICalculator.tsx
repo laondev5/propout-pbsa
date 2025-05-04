@@ -106,7 +106,7 @@ export default function ROICalculator() {
         </div>
         <div className="mb-6 text-center">
           <div className="text-lg font-medium text-primary">
-            {`Total Investment Estimate for ${selectedLocation.name} PBSA`}
+            {`Total Investment Estimate for ${selectedLocation.name} PBSA`}
           </div>
           <div className="text-2xl font-bold text-primary">
             ₦{formatNumberWithCommas(selectedLocation.total)}
